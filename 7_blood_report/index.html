@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Health Checker</h1>
+    </header>
+    <main>
+        <section class="input-container">
+            <label for="hemoglobin">Hemoglobin (g/dL) - Ideal Range (14-18):</label>
+            <div class="input-group">
+                <input type="number" id="hemoglobin" placeholder="Enter value">
+                <button class="get-results-btn">Get Results</button>
+            </div>
+            <p class="result" id="hemoglobin-result"></p>
+        </section>
+        <section class="input-container">
+            <label for="platelets">Platelets (per μL) - Ideal Range (150,000-450,000):</label>
+            <div class="input-group">
+                <input type="number" id="platelets" placeholder="Enter value">
+                <button class="get-results-btn">Get Results</button>
+            </div>
+            <p class="result" id="platelets-result"></p>
+        </section>
+        <section class="input-container">
+            <label for="rbc">Red Blood Cell Count (RBC) (per μL) - Ideal Range (4,600,000-6,000,000):</label>
+            <div class="input-group">
+                <input type="number" id="rbc" placeholder="Enter value">
+                <button class="get-results-btn">Get Results</button>
+            </div>
+            <p class="result" id="rbc-result"></p>
+        </section>
+        <section class="input-container">
+            <label for="sugar">Blood Sugar Level (mg/dL) - Ideal Range (70-100):</label>
+            <div class="input-group">
+                <input type="number" id="sugar" placeholder="Enter value">
+                <button class="get-results-btn">Get Results</button>
+            </div>
+            <p class="result" id="sugar-result"></p>
+        </section>
+        <section class="input-container">
+            <label for="wbc">White Blood Cell Count (WBC) (per μL) - Ideal Range (4,500-11,000):</label>
+            <div class="input-group">
+                <input type="number" id="wbc" placeholder="Enter value">
+                <button class="get-results-btn">Get Results</button>
+            </div>
+            <p class="result" id="wbc-result"></p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

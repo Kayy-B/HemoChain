@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Eligibility Checker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Donor Eligibility Checker</h1>
+    <label for="gender">Gender (M/F):</label>
+    <input type="text" id="gender"><br><br>
+    <label for="age">Age:</label>
+    <input type="number" id="age"><br><br>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight"><br><br>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height"><br><br>
+    <label for="lastDonation">Days since Last Donation:</label>
+    <input type="number" id="lastDonation"><br><br>
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

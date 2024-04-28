@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bag Registration</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Blood Bag Registration Form</h2>
+    <form id="bloodBagForm">
+        <label for="donorID">Donor ID:</label>
+        <input type="number" id="donorID" name="donorID" required><br>
+
+        <label for="bloodBankID">Blood Bank ID:</label>
+        <input type="number" id="bloodBankID" name="bloodBankID" required><br>
+
+        <label for="collectionDate">Collection Date:</label>
+        <input type="date" id="collectionDate" name="collectionDate" required><br>
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="date" id="expiryDate" name="expiryDate" required><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <div id="message"></div>
+
+    <!-- Include Web3.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    <!-- Include app.js script -->
+    <script src="app.js"></script>
+</body>
+</html>

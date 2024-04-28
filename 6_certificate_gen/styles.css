@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #F1FAEE; /* Off-white background */
+    color: #000000; /* Dark blue text */
+}
+
+h1 {
+    text-align: center;
+    color: #E63946; /* Vibrant red heading */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input[type="number"], input[type="text"], input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #E63946; /* Vibrant red button */
+    color: #F1FAEE; /* Light text on the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #B81D25; /* Darker red on hover */
+}
+
+#certificateResult {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}

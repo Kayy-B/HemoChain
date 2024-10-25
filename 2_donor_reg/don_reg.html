@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Registration</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Blood Donation Registration Form</h2>
+    <form id="donorForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="mobNum">Mobile Number:</label>
+        <input type="number" id="mobNum" name="mobNum" required>
+
+        <label for="emailID">Email ID:</label>
+        <input type="text" id="emailID" name="emailID" required>
+
+        <label for="aadharNum">Aadhar Number:</label>
+        <input type="number" id="aadharNum" name="aadharNum" required>
+
+        <label for="residentialAddress">Residential Address:</label>
+        <input type="text" id="residentialAddress" name="residentialAddress" required>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <div id="message"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

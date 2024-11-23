@@ -7,22 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Find Blood</h1>
-        <div id="getBloodStatusForm" class="form-container">
-            <h2>Get Blood Status</h2>
-            <form id="getBloodStatus">
-                <label for="bloodBagId">Blood Bag ID:</label>
-                <input type="number" id="getBloodBagId" name="bloodBagId" required>
-                <br>
-                <button type="submit" class="submit-button">Get Status</button>
-            </form>
-            <div id="bloodStatus"></div>
+    <header>
+        <button id="darkModeToggle" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Find Blood</h1>
+            <div id="getBloodStatusForm" class="form-container">
+                <h2>Get Blood Status</h2>
+                <form id="getBloodStatus">
+                    <label for="bloodBagId">Blood Bag ID:</label>
+                    <input type="number" id="getBloodBagId" name="bloodBagId" required>
+                    <br>
+                    <button type="submit" class="submit-button">Get Status</button>
+                </form>
+                <div id="bloodStatus"></div>
+            </div>
+
+            <div id="bloodBagList"></div>
         </div>
-
-        <div id="bloodBagList"></div>
-    </div>
-
+    </main>
+    <footer>
+        <button class="nav-button" style="float: left;" onclick="location.href='../index.html'">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" style="float: right;" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
     <script src="app.js"></script>
 </body>

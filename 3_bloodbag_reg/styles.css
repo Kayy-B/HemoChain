@@ -1,22 +1,53 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #F1FAEE; /* Off-white background */
-    color: #000000; /* Dark blue text */
+    color: #000000; /* Black text */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1E1E1E; /* Dark background */
+    color: #FFFFFF; /* Light text */
 }
 
 h2 {
     text-align: center;
-    color: #E63946; /* Vibrant red heading */
+    color: #321717; /* Dark red heading */
+    transition: color 0.3s;
+}
+
+body.dark-mode h2 {
+    color: #F1FAEE; /* Light text for dark mode */
 }
 
 form {
     max-width: 400px;
     margin: 0 auto;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+body.dark-mode form {
+    background: #2E2E2E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 label {
     display: inline-block;
     width: 150px;
+    color: #321717; /* Dark red label */
+    transition: color 0.3s;
+}
+
+body.dark-mode label {
+    color: #F1FAEE; /* Light text in dark mode */
 }
 
 input[type="number"], input[type="date"] {
@@ -24,6 +55,15 @@ input[type="number"], input[type="date"] {
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+body.dark-mode input[type="number"], body.dark-mode input[type="date"] {
+    background-color: #444;
+    border-color: #666;
+    color: #F1FAEE;
 }
 
 input[type="submit"] {
@@ -34,8 +74,10 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 input[type="submit"]:hover {
     background-color: #B81D25; /* Darker red on hover */
+    transform: scale(1.05);
 }

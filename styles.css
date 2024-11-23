@@ -1,18 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #f44336;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 main {
-    padding: 10px;
+    padding: 2rem;
 }
 
 #buttons-section {
@@ -24,25 +33,37 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+    gap: 1rem;
 }
 
 .button-wrapper {
-    margin: 20px; /* Adjust the margin here */
-    position: relative;
+    flex: 1 1 calc(33.333% - 1rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.button-wrapper:hover {
+    transform: translateY(-5px);
 }
 
 .btn {
-    padding: 12px; /* Adjust the padding here */
-    background-color: #f44336;
+    display: block;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
     color: #fff;
     text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    background-color: #d32f2f;
+    background: linear-gradient(135deg, #ff4757, #ff6b6b);
 }
 
 .step {
@@ -50,11 +71,101 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .button-wrapper {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .button-wrapper {
+        flex: 1 1 100%;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .button-wrapper {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .btn {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+}
+
+.connect-wallet-btn {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.connect-wallet-btn:hover {
+    background-color: #0056b3;
+}
+
+.account-address {
+    font-size: 1rem;
+    color: #007bff;
+    margin-left: 1rem;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.account-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.account-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.account-dropdown-content a {
+    color: black;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    display: block;
+}
+
+.account-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.account-dropdown:hover .account-dropdown-content {
+    display: block;
 }

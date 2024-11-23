@@ -7,39 +7,53 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Blood Compatibility Checker</h1>
-        <form id="bloodCompatibilityForm">
-            <label for="donorBloodType">Donor Blood Type:</label>
-            <select id="donorBloodType" name="donorBloodType">
-                <option value="0">O Negative</option>
-                <option value="1">O Positive</option>
-                <option value="2">A Negative</option>
-                <option value="3">A Positive</option>
-                <option value="4">B Negative</option>
-                <option value="5">B Positive</option>
-                <option value="6">AB Negative</option>
-                <option value="7">AB Positive</option>
-            </select>
-            <br>
-            <label for="receiverBloodType">Receiver Blood Type:</label>
-            <select id="receiverBloodType" name="receiverBloodType">
-                <option value="0">O Negative</option>
-                <option value="1">O Positive</option>
-                <option value="2">A Negative</option>
-                <option value="3">A Positive</option>
-                <option value="4">B Negative</option>
-                <option value="5">B Positive</option>
-                <option value="6">AB Negative</option>
-                <option value="7">AB Positive</option>
-            </select>
-            <br>
-            <button type="button" onclick="checkCompatibility()">Check Compatibility</button>
-        </form>
-        <div id="compatibilityResult"></div>
-    </div>
+    <header>
+        <button id="darkModeToggle" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Blood Compatibility Checker</h1>
+            <form id="bloodCompatibilityForm">
+                <label for="donorBloodType">Donor Blood Type:</label>
+                <select id="donorBloodType" name="donorBloodType">
+                    <option value="0">O Negative</option>
+                    <option value="1">O Positive</option>
+                    <option value="2">A Negative</option>
+                    <option value="3">A Positive</option>
+                    <option value="4">B Negative</option>
+                    <option value="5">B Positive</option>
+                    <option value="6">AB Negative</option>
+                    <option value="7">AB Positive</option>
+                </select>
+                <br>
+                <label for="receiverBloodType">Receiver Blood Type:</label>
+                <select id="receiverBloodType" name="receiverBloodType">
+                    <option value="0">O Negative</option>
+                    <option value="1">O Positive</option>
+                    <option value="2">A Negative</option>
+                    <option value="3">A Positive</option>
+                    <option value="4">B Negative</option>
+                    <option value="5">B Positive</option>
+                    <option value="6">AB Negative</option>
+                    <option value="7">AB Positive</option>
+                </select>
+                <br>
+                <button type="button" onclick="checkCompatibility()">Check Compatibility</button>
+            </form>
+            <div id="compatibilityResult"></div>
+        </div>
+    </main>
+    <footer>
+        <button class="nav-button" style="float: left;" onclick="location.href='../index.html'">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" style="float: right;" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
     <script src="app.js"></script>
-
 </body>
 </html>

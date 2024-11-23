@@ -1,32 +1,98 @@
+@import url('../styles.css');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #F1FAEE; /* Off-white background */
-    color: #000000; /*black text*/
+    color: #000000; /* Black text */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1E1E1E; /* Dark background */
+    color: #FFFFFF; /* Light text */
 }
 
 h1 {
     text-align: center;
-    color: #E63946; /* Vibrant red heading */
+    color: #321717; /* Dark red heading */
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    transition: color 0.3s;
+}
+
+body.dark-mode h1 {
+    color: #F1FAEE; /* Light text for dark mode */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Adjust layout */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent; /* Remove background color */
+    color: #321717; /* Dark red text */
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #F1FAEE;
 }
 
 form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+body.dark-mode form {
+    background: #2E2E2E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    color: #321717; /* Dark red label */
+    transition: color 0.3s;
 }
 
-select, input[type="number"] {
+body.dark-mode label {
+    color: #F1FAEE; /* Light text in dark mode */
+}
+
+select, input[type="number"], input[type="text"] {
     width: calc(100% - 20px);
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+body.dark-mode select, body.dark-mode input[type="number"], body.dark-mode input[type="text"] {
+    background-color: #444;
+    border-color: #666;
+    color: #F1FAEE;
 }
 
 button {
@@ -37,13 +103,37 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #B81D25; /* Darker red on hover */
+    transform: scale(1.05);
 }
 
 #result {
     margin-top: 20px;
     font-weight: bold;
+    color: #321717; /* Dark red result text */
+    transition: color 0.3s;
+}
+
+body.dark-mode #result {
+    color: #F1FAEE; /* Light text in dark mode */
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #321717; /* Dark red text for light mode */
+    transition: color 0.3s;
+    position: absolute;
+    right: 20px;
+    width: auto;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #F1FAEE; /* Light text for dark mode */
 }

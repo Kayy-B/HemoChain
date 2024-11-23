@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEMOCHAIN - Blood Donation</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Welcome to HEMOCHAIN</h1>
-        <p>Blockchain Based Blood Donation</p>
+        <div class="header-buttons">
+            <button id="connectWalletBtn" class="connect-wallet-btn">Connect to Wallet</button>
+            <div class="account-dropdown">
+                <span id="accountAddress" class="account-address"></span>
+                <div class="account-dropdown-content">
+                    <p id="fullAccountAddress"></p>
+                    <a href="#" id="connectDifferentAccount">Connect with different account</a>
+                </div>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
 
     <main>
@@ -50,6 +63,13 @@
 
     <footer>
         <p>&copy; 2024 HEMOCHAIN. All rights reserved.</p>
+        <button class="nav-button" style="float: left;" onclick="location.href='index.html'">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" style="float: right;" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -3,14 +3,25 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #F1FAEE; /* Off-white background */
-    color: #000000; /*black text*/
-    font-size: 16px; /* increased font size */
+    color: #000000; /* Black text */
+    font-size: 16px; /* Increased font size */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1E1E1E; /* Dark background */
+    color: #FFFFFF; /* Light text */
 }
 
 h1 {
     text-align: center;
-    color: #E63946; /* Vibrant red heading */
-    font-size: 24px; /* increased font size */
+    color: #321717; /* Dark red heading */
+    font-size: 24px; /* Increased font size */
+    transition: color 0.3s;
+}
+
+body.dark-mode h1 {
+    color: #F1FAEE; /* Light text for dark mode */
 }
 
 main {
@@ -24,11 +35,27 @@ main {
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.input-container:hover {
+    transform: scale(1.02);
+}
+
+body.dark-mode .input-container {
+    background: #2E2E2E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    color: #321717; /* Dark red label */
+    transition: color 0.3s;
+}
+
+body.dark-mode label {
+    color: #F1FAEE; /* Light text in dark mode */
 }
 
 input[type="number"] {
@@ -37,6 +64,13 @@ input[type="number"] {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+body.dark-mode input[type="number"] {
+    background-color: #444;
+    border-color: #666;
+    color: #F1FAEE;
 }
 
 .input-group {
@@ -45,20 +79,28 @@ input[type="number"] {
 }
 
 .get-results-btn {
-    background-color: #E63946;
-    color: #FFF;
+    background-color: #E63946; /* Vibrant red button */
+    color: #F1FAEE; /* Light text on the button */
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .get-results-btn:hover {
-    background-color: #B81D25;
+    background-color: #B81D25; /* Darker red on hover */
+    transform: scale(1.05);
 }
 
 .result {
     margin-top: 10px;
     font-weight: bold;
+    color: #321717; /* Dark red result text */
+    transition: color 0.3s;
+}
+
+body.dark-mode .result {
+    color: #F1FAEE; /* Light text in dark mode */
 }

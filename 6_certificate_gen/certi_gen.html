@@ -7,33 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Certificate Generation</h1>
-        <form id="certificateForm">
-            <label for="userType">User Type:</label>
-            <select id="userType" name="userType">
-                <option value="0">Donor</option>
-                <option value="1">Receiver</option>
-            </select>
-            <br>
-            <label for="donorID">Donor ID:</label>
-            <input type="text" id="donorID" name="donorID" required>
-            <br>
-            <label for="receiverID">Receiver ID:</label>
-            <input type="text" id="receiverID" name="receiverID" required>
-            <br>
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-            <br>
-            <label for="fullName">Your Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
-            <br>
-            <button type="button" onclick="generateCertificate()">Generate Certificate</button>
-        </form>
-        <div id="certificateResult"></div>
-    </div>
+    <header>
+        <button id="darkModeToggle" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Certificate Generation</h1>
+            <form id="certificateForm">
+                <label for="userType">User Type:</label>
+                <select id="userType" name="userType">
+                    <option value="0">Donor</option>
+                    <option value="1">Receiver</option>
+                </select>
+                <br>
+                <label for="donorID">Donor ID:</label>
+                <input type="text" id="donorID" name="donorID" required>
+                <br>
+                <label for="receiverID">Receiver ID:</label>
+                <input type="text" id="receiverID" name="receiverID" required>
+                <br>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <br>
+                <label for="fullName">Your Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <br>
+                <button type="button" onclick="generateCertificate()">Generate Certificate</button>
+            </form>
+            <div id="certificateResult"></div>
+        </div>
+    </main>
+    <footer>
+        <button class="nav-button" style="float: left;" onclick="location.href='../index.html'">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" style="float: right;" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
     <script src="app.js"></script>
-
 </body>
 </html>

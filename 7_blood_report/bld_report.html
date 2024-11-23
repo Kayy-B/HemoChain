@@ -9,6 +9,9 @@
 <body>
     <header>
         <h1>Health Checker</h1>
+        <button id="darkModeToggle" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
     </header>
     <main>
         <section class="input-container">
@@ -52,6 +55,14 @@
             <p class="result" id="wbc-result"></p>
         </section>
     </main>
+    <footer>
+        <button class="nav-button" style="float: left;" onclick="location.href='../index.html'">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" style="float: right;" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
     <script src="app.js"></script>
 </body>

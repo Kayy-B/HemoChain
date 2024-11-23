@@ -5,23 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donor Eligibility Checker</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <h1>Donor Eligibility Checker</h1>
-    <label for="gender">Gender (M/F):</label>
-    <input type="text" id="gender"><br><br>
-    <label for="age">Age:</label>
-    <input type="number" id="age"><br><br>
-    <label for="weight">Weight (kg):</label>
-    <input type="number" id="weight"><br><br>
-    <label for="height">Height (cm):</label>
-    <input type="number" id="height"><br><br>
-    <label for="lastDonation">Days since Last Donation:</label>
-    <input type="number" id="lastDonation"><br><br>
-    <button onclick="checkEligibility()">Check Eligibility</button>
-    <p id="result"></p>
-
-    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    <header>
+        <h1>Donor Eligibility Checker</h1>
+        <button id="darkModeToggle" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <main>
+        <form>
+            <label for="gender">Gender (M/F):</label>
+            <input type="text" id="gender"><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age"><br><br>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight"><br><br>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height"><br><br>
+            <label for="lastDonation">Days since Last Donation:</label>
+            <input type="number" id="lastDonation"><br><br>
+            <button type="button" onclick="checkEligibility()">Check Eligibility</button>
+        </form>
+        <p id="result"></p>
+    </main>
+    <footer>
+        <button class="nav-button" style="float: left;" onclick="location.href='../index.html'">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" style="float: right;" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

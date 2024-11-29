@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const connectDifferentAccount = document.getElementById('connectDifferentAccount');
 
     connectWalletBtn.addEventListener('click', async () => {
-        if (window.ethereum) {
+        if (typeof window.ethereum !== 'undefined') {
             try {
                 const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                 const account = accounts[0];
